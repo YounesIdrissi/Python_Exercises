@@ -59,6 +59,7 @@ class Converter:
 
     #main loop function handles all the other functions; this is the executable
     def main_loop(self):
+        convert.intro()
         while True:
             #error handling initialization; getting initial user input
             try:
@@ -76,7 +77,7 @@ class Converter:
                 convert.calculate_mi()
             elif self.entry == 3:
                 break
-            else:#handles anything which isn't a valid input
+            else:#handles invalid integer options
                 print("That is not an option.")
                 
             print()#line space for terminal aesthetic; better UX

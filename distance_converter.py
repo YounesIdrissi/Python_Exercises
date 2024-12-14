@@ -1,7 +1,8 @@
 #Distance Converter - Functional Program
 
-name = str(input("Please enter your name: "))
-print(f"-------- Welcome {name} to the Distance Converter Application --------")
+def intro():
+    name = str(input("Please enter your name: "))
+    print(f"-------- Welcome {name} to the Distance Converter Application --------")
 
 
 def choices():#reusable lines of code; best to put them in a function
@@ -37,6 +38,7 @@ def calculate_mi():
 
 #main loop function handles all the other functions; this is the executable
 def main_loop():
+    intro()
     while True:
         #error handling to keep out invalid input
         try:
@@ -53,7 +55,7 @@ def main_loop():
             calculate_mi()
         elif entry == 3:
             break
-        else:#handles anything which isn't a valid input
+        else:#handles anything which isn't a valid input; sometimes redundant
             print("That is not an option.")
             
         print()#line space for terminal aesthetic; better UX
